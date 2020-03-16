@@ -1,0 +1,51 @@
+{
+  "name": "futsal-fever-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Futsal Fever API",
+  "main": "config.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./api/index.js",
+    "dev": "nodemon --exec babel-node ./api/index.js",
+    "migrate": "sequelize db:migrate"
+  },
+  "keywords": [
+    "express",
+    "postgres"
+  ],
+  "author": "Futsal Fever Team",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "client-sessions": "^0.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "path": "^0.12.7",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "pm2": "^4.2.3",
+    "sequelize": "^5.21.5",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "@babel/runtime": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "repository": {
+    "type": "git"
+  }
+}

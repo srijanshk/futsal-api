@@ -1,0 +1,30 @@
+# docker-compose.yml
+version: "3.7"
+services:
+  app:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL_DEV: postgres://futsal:password@postgres:5432/futsalmadness
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    command: npm run dev
+    volumes:
+      - .:/app/
+      - /app/node_modules
+  postgres:
+    image: postgres:12
+    ports:
+      - "35432:5432"
+    volumes:
+      - d:/data/docker/postgresql/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: futsalmadness
+      POSTGRES_HOST: 192.168.99.100
+      PGDATA: /tmp
+
